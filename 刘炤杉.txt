@@ -1,0 +1,215 @@
+
+Administrator@PC-20170331VIUG MINGW64 /e/LiuZS/nodeJS/20170608
+$ git init
+Initialized empty Git repository in E:/LiuZS/nodeJS/20170608/.git/
+
+Administrator@PC-20170331VIUG MINGW64 /e/LiuZS/nodeJS/20170608 (master)
+$ git add .
+warning: LF will be replaced by CRLF in package.json.
+The file will have its original line endings in your working directory.
+
+Administrator@PC-20170331VIUG MINGW64 /e/LiuZS/nodeJS/20170608 (master)
+$ git status
+On branch master
+
+Initial commit
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   package.json
+        new file:   tr.txt
+
+
+Administrator@PC-20170331VIUG MINGW64 /e/LiuZS/nodeJS/20170608 (master)
+$ git status
+On branch master
+
+Initial commit
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   package.json
+        new file:   tr.txt
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   tr.txt
+
+
+Administrator@PC-20170331VIUG MINGW64 /e/LiuZS/nodeJS/20170608 (master)
+$ git diff tr.txt
+diff --git a/tr.txt b/tr.txt
+index 0afacd3..62f96e3 100644
+--- a/tr.txt
++++ b/tr.txt
+@@ -1 +1,2 @@
+-NO ANY
+\ No newline at end of file
++NO ANY
++maybe
+\ No newline at end of file
+
+Administrator@PC-20170331VIUG MINGW64 /e/LiuZS/nodeJS/20170608 (master)
+$ git add tr.txt
+
+Administrator@PC-20170331VIUG MINGW64 /e/LiuZS/nodeJS/20170608 (master)
+$ git status
+On branch master
+
+Initial commit
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   package.json
+        new file:   tr.txt
+
+
+Administrator@PC-20170331VIUG MINGW64 /e/LiuZS/nodeJS/20170608 (master)
+$ git status
+On branch master
+
+Initial commit
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   package.json
+        new file:   tr.txt
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   tr.txt
+
+
+Administrator@PC-20170331VIUG MINGW64 /e/LiuZS/nodeJS/20170608 (master)
+$ git checkout
+fatal: You are on a branch yet to be born
+
+Administrator@PC-20170331VIUG MINGW64 /e/LiuZS/nodeJS/20170608 (master)
+$ cat tr.txt
+NO ANY
+error
+Administrator@PC-20170331VIUG MINGW64 /e/LiuZS/nodeJS/20170608 (master)
+$ git checkout .
+
+Administrator@PC-20170331VIUG MINGW64 /e/LiuZS/nodeJS/20170608 (master)
+$ cat tr.txt
+NO ANY
+maybe
+Administrator@PC-20170331VIUG MINGW64 /e/LiuZS/nodeJS/20170608 (master)
+$ git commit -m "work"
+[master (root-commit) 75f9e90] work
+ 2 files changed, 15 insertions(+)
+ create mode 100644 package.json
+ create mode 100644 tr.txt
+
+Administrator@PC-20170331VIUG MINGW64 /e/LiuZS/nodeJS/20170608 (master)
+$ git log
+commit 75f9e90db81f5bd1eec8caf78e481ed450844df8
+Author: kaguto <milchstrabe@163.com>
+Date:   Thu Jun 8 09:58:43 2017 +0800
+
+    work
+
+Administrator@PC-20170331VIUG MINGW64 /e/LiuZS/nodeJS/20170608 (master)
+$ git reset --hard 75f9e90db81f5bd1eec8caf78e481ed450844df8
+HEAD is now at 75f9e90 work
+
+Administrator@PC-20170331VIUG MINGW64 /e/LiuZS/nodeJS/20170608 (master)
+$ git remote add origin https://github.com/milchstrabe/store-of-practice.git
+
+Administrator@PC-20170331VIUG MINGW64 /e/LiuZS/nodeJS/20170608 (master)
+$ git push -u origin master
+To https://github.com/milchstrabe/store-of-practice.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/milchstrabe/store-of-practice.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+Administrator@PC-20170331VIUG MINGW64 /e/LiuZS/nodeJS/20170608 (master)
+$ git push origin master
+To https://github.com/milchstrabe/store-of-practice.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/milchstrabe/store-of-practice.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+Administrator@PC-20170331VIUG MINGW64 /e/LiuZS/nodeJS/20170608 (master)
+$ git push origin master
+To https://github.com/milchstrabe/store-of-practice.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/milchstrabe/store-of-practice.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+Administrator@PC-20170331VIUG MINGW64 /e/LiuZS/nodeJS/20170608 (master)
+$ git push origin master
+To https://github.com/milchstrabe/store-of-practice.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/milchstrabe/store-of-practice.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+Administrator@PC-20170331VIUG MINGW64 /e/LiuZS/nodeJS/20170608 (master)
+$ git pull
+warning: no common commits
+remote: Counting objects: 7, done.
+remote: Compressing objects: 100% (4/4), done.
+remote: Total 7 (delta 1), reused 6 (delta 0), pack-reused 0
+Unpacking objects: 100% (7/7), done.
+From https://github.com/milchstrabe/store-of-practice
+ * [new branch]      master     -> origin/master
+There is no tracking information for the current branch.
+Please specify which branch you want to merge with.
+See git-pull(1) for details.
+
+    git pull <remote> <branch>
+
+If you wish to set tracking information for this branch you can do so with:
+
+    git branch --set-upstream-to=origin/<branch> master
+
+
+Administrator@PC-20170331VIUG MINGW64 /e/LiuZS/nodeJS/20170608 (master)
+$ git pull https://github.com/milchstrabe/store-of-practice.git
+From https://github.com/milchstrabe/store-of-practice
+ * branch            HEAD       -> FETCH_HEAD
+fatal: refusing to merge unrelated histories
+
+Administrator@PC-20170331VIUG MINGW64 /e/LiuZS/nodeJS/20170608 (master)
+$ git pull
+There is no tracking information for the current branch.
+Please specify which branch you want to merge with.
+See git-pull(1) for details.
+
+    git pull <remote> <branch>
+
+If you wish to set tracking information for this branch you can do so with:
+
+    git branch --set-upstream-to=origin/<branch> master
+
+
+Administrator@PC-20170331VIUG MINGW64 /e/LiuZS/nodeJS/20170608 (master)
+$
+
+Administrator@PC-20170331VIUG MINGW64 /e/LiuZS/nodeJS/20170608 (master)
+$
